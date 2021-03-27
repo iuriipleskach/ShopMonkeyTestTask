@@ -33,7 +33,7 @@ class EditableImage: ObservableObject, Identifiable {
     }
 
     func commit() {
-        #warning("save to disk")
+        originalImage = uiImage
     }
 
     func reset() {

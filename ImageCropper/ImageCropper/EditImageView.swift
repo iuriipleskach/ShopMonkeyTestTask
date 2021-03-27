@@ -10,12 +10,16 @@ import SwiftUI
 struct EditImageView: View {
     private let spacerMinLength: CGFloat = 40
     private let scale = CGAffineTransform(scaleX: 0.8, y: 0.8)
+
+    @Environment(\.editMode) var editMode
     @ObservedObject var image: EditableImage
 
     var body: some View {
         GeometryReader { geometry in
             VStack {
+                EditToolbar(cancel: cancel, save: save)
                 Spacer(minLength: spacerMinLength)
+
                 HStack {
                     Spacer(minLength: spacerMinLength)
                         .foregroundColor(.blue)
@@ -28,7 +32,7 @@ struct EditImageView: View {
                         .overlay(
                             GeometryReader { geometry in
                                 CropOverlayView { geometryCropRect in
-                                    let scaleTransform = CGAffineTransform.init(
+                                    let scaleTransform = CGAffineTransform(
                                         scaleX: image.uiImage.size.width / geometry.size.width,
                                         y: image.uiImage.size.height / geometry.size.height)
 
@@ -42,7 +46,18 @@ struct EditImageView: View {
                 }
                 Spacer(minLength: spacerMinLength)
             }
+
         }
+    }
+
+    // MARK: -
+
+    private func cancel() {
+        image.reset()
+    }
+
+    private func save() {
+        image.commit()
     }
 }
 

@@ -8,24 +8,30 @@
 import SwiftUI
 
 struct CropOverlayView: View {
+    private var editModeEnabled: Bool {
+        editMode?.wrappedValue == .active
+    }
+    private var borderWidth: CGFloat {
+        editModeEnabled ? 3 : 0
+    }
+    let onCropChanged: ((CGRect) -> Void)
+
+    @Environment(\.editMode) var editMode
     @State private var isDragging = false
     @State private var dragInsets = EdgeInsets()
-    let onCropChanged: ((CGRect) -> Void)
 
     var body: some View {
         GeometryReader { geometry in
             Rectangle()
                 .fill(isDragging ? Color.blue.opacity(0.15) : Color.clear)
-                .border(Color.black, width: 3)
+                .border(Color.black, width: borderWidth)
                 .padding(dragInsets)
                 .gesture(
                     DragGesture(minimumDistance: 0)
                         .onChanged { value in
-                            isDragging = true
                             dragGestureUpdated(with: value, geometry: geometry)
                         }
                         .onEnded { value in
-                            isDragging = false
                             dragGestureFinished(with: value, geometry: geometry)
                         }
                 )
@@ -57,16 +63,22 @@ struct CropOverlayView: View {
     }
 
     private func dragGestureUpdated(with value: DragGesture.Value, geometry: GeometryProxy) {
-        dragInsets = calculateDragInsets(for: value, geometry: geometry)
+        if editModeEnabled {
+            isDragging = true
+            dragInsets = calculateDragInsets(for: value, geometry: geometry)
+        }
     }
 
     private func dragGestureFinished(with value: DragGesture.Value, geometry: GeometryProxy) {
-        let insets = calculateDragInsets(for: value, geometry: geometry)
-        let originalFrame = CGRect(origin: .zero, size: geometry.size)
-        let croppedFrame = originalFrame.inset(by: insets.uiEdgeInsets)
-        onCropChanged(croppedFrame)
+        if editModeEnabled {
+            let insets = calculateDragInsets(for: value, geometry: geometry)
+            let originalFrame = CGRect(origin: .zero, size: geometry.size)
+            let croppedFrame = originalFrame.inset(by: insets.uiEdgeInsets)
+            onCropChanged(croppedFrame)
 
-        dragInsets = EdgeInsets() // Reset insets
+            isDragging = false
+            dragInsets = EdgeInsets() // Reset insets
+        }
     }
 }
 
