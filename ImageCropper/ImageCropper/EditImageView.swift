@@ -30,7 +30,9 @@ struct EditImageView: View {
                                     scaleX: image.uiImage.size.width / overlayGeometry.size.width,
                                     y: image.uiImage.size.height / overlayGeometry.size.height
                                 )
-                                let imageCropRect = overlayCropRect.applying(scaleTransform)
+                                let imageCropRect = overlayCropRect
+                                    .applying(scaleTransform)
+
                                 image.crop(to: imageCropRect)
                             }
                         }
