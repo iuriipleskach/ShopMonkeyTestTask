@@ -7,10 +7,10 @@
 
 import SwiftUI
 
-class ImageStore: ObservableObject {
-    @Published var images: [Image]
+final class ImageStore: ObservableObject {
+    @Published var images: [EditableImage]
 
-    init(images: [Image] = [Image("Car1"), Image("Car2"), Image("Car3")]) {
+    init(images: [EditableImage] = [EditableImage(imageName: "Car1"), EditableImage(imageName: "Car2"), EditableImage(imageName: "Car3")]) { // Force unwrap is used only for testing purposes to simplify the initialization code
         self.images = images
     }
 }
