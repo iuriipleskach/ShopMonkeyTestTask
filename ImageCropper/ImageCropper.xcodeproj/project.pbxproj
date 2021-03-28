@@ -47,12 +47,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F581C8EA261110AC00B59655 /* ContentView */ = {
+			isa = PBXGroup;
+			children = (
+				F5E37666260F273C00CDD9C7 /* ContentView.swift */,
+				F581C8E72611045A00B59655 /* ContentViewModel.swift */,
+			);
+			path = ContentView;
+			sourceTree = "<group>";
+		};
 		F5A7C12D2610EDDA006D153E /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				F581C8EA261110AC00B59655 /* ContentView */,
 				F5A7C12E2610EDF6006D153E /* EditImageView */,
-				F5E37666260F273C00CDD9C7 /* ContentView.swift */,
-				F581C8E72611045A00B59655 /* ContentViewModel.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";

@@ -10,7 +10,6 @@ import SwiftUI
 struct EditImageView: View {
     private let spacerMinLength: CGFloat = 40
 
-    @Environment(\.editMode) var editMode
     @ObservedObject var viewModel: EditImageViewModel
 
     var body: some View {
