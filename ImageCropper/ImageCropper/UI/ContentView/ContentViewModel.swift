@@ -9,7 +9,7 @@ import UIKit
 
 class ContentViewModel: ObservableObject {
     private let picturesStore: PicturesStore
-    private var currentIndex: Int = 0 {
+    private var currentIndex = 0 {
         didSet {
             currentImage = picturesStore.pictures[currentIndex]
         }

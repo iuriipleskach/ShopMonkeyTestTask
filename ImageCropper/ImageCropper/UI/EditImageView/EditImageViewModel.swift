@@ -60,7 +60,7 @@ class EditImageViewModel: ObservableObject {
         originalPicture.image = image
     }
 
-    func reset() {
+    func undo() {
         image = originalPicture.image
         scale = 1
     }

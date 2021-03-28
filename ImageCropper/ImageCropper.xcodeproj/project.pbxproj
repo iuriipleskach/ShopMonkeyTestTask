@@ -127,8 +127,8 @@
 		F5E37677260F28C200CDD9C7 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				F5E37678260F28F200CDD9C7 /* PicturesStore.swift */,
 				F581C8EC2611138700B59655 /* Picture.swift */,
+				F5E37678260F28F200CDD9C7 /* PicturesStore.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";

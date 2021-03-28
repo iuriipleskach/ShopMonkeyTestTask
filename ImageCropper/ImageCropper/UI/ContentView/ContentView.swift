@@ -10,6 +10,7 @@ import SwiftUI
 struct ContentView: View {
     @Environment(\.editMode) var editMode
     @ObservedObject var viewModel: ContentViewModel
+
     var body: some View {
         if let image = viewModel.currentImage {
             VStack {

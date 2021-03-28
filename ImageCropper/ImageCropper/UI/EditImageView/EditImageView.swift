@@ -15,7 +15,7 @@ struct EditImageView: View {
     var body: some View {
         ZStack {
             VStack {
-                EditToolbar(cancel: viewModel.reset, save: viewModel.applyEdits, reset: viewModel.reset)
+                EditToolbar(cancel: viewModel.undo, save: viewModel.applyEdits, undo: viewModel.undo)
                     .zIndex(1.0)
                 Spacer(minLength: spacerMinLength)
 
