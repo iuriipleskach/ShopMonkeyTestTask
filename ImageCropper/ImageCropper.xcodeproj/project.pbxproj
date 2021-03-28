@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F5A7C12A2610BEE4006D153E /* EditImageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5A7C1292610BEE4006D153E /* EditImageViewModel.swift */; };
 		F5A80A06260FB13A006236B5 /* EditToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5A80A05260FB13A006236B5 /* EditToolbar.swift */; };
-		F5B937A3260F61E5002FBA14 /* EditableImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B937A2260F61E5002FBA14 /* EditableImage.swift */; };
 		F5B937A7260F6557002FBA14 /* UIImage+Crop.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B937A6260F6557002FBA14 /* UIImage+Crop.swift */; };
 		F5E37665260F273C00CDD9C7 /* ImageCropperApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5E37664260F273C00CDD9C7 /* ImageCropperApp.swift */; };
 		F5E37667260F273C00CDD9C7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5E37666260F273C00CDD9C7 /* ContentView.swift */; };
@@ -20,8 +20,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F5A7C1292610BEE4006D153E /* EditImageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditImageViewModel.swift; sourceTree = "<group>"; };
 		F5A80A05260FB13A006236B5 /* EditToolbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditToolbar.swift; sourceTree = "<group>"; };
-		F5B937A2260F61E5002FBA14 /* EditableImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditableImage.swift; sourceTree = "<group>"; };
 		F5B937A6260F6557002FBA14 /* UIImage+Crop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Crop.swift"; sourceTree = "<group>"; };
 		F5E37661260F273C00CDD9C7 /* ImageCropper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ImageCropper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5E37664260F273C00CDD9C7 /* ImageCropperApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCropperApp.swift; sourceTree = "<group>"; };
@@ -45,6 +45,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F5A7C12D2610EDDA006D153E /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				F5A7C12E2610EDF6006D153E /* EditImageView */,
+				F5E37666260F273C00CDD9C7 /* ContentView.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		F5A7C12E2610EDF6006D153E /* EditImageView */ = {
+			isa = PBXGroup;
+			children = (
+				F5E37674260F289100CDD9C7 /* EditImageView.swift */,
+				F5A7C1292610BEE4006D153E /* EditImageViewModel.swift */,
+				F5E3767C260F2F1D00CDD9C7 /* CropOverlayView.swift */,
+				F5A80A05260FB13A006236B5 /* EditToolbar.swift */,
+			);
+			path = EditImageView;
+			sourceTree = "<group>";
+		};
 		F5B937A5260F6540002FBA14 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -74,11 +94,8 @@
 			children = (
 				F5B937A5260F6540002FBA14 /* Extensions */,
 				F5E37677260F28C200CDD9C7 /* Model */,
+				F5A7C12D2610EDDA006D153E /* UI */,
 				F5E37664260F273C00CDD9C7 /* ImageCropperApp.swift */,
-				F5E37666260F273C00CDD9C7 /* ContentView.swift */,
-				F5E37674260F289100CDD9C7 /* EditImageView.swift */,
-				F5E3767C260F2F1D00CDD9C7 /* CropOverlayView.swift */,
-				F5A80A05260FB13A006236B5 /* EditToolbar.swift */,
 				F5E37668260F273D00CDD9C7 /* Assets.xcassets */,
 				F5E3766D260F273D00CDD9C7 /* Info.plist */,
 				F5E3766A260F273D00CDD9C7 /* Preview Content */,
@@ -98,7 +115,6 @@
 			isa = PBXGroup;
 			children = (
 				F5E37678260F28F200CDD9C7 /* ImageStore.swift */,
-				F5B937A2260F61E5002FBA14 /* EditableImage.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -173,8 +189,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				F5E37667260F273C00CDD9C7 /* ContentView.swift in Sources */,
-				F5B937A3260F61E5002FBA14 /* EditableImage.swift in Sources */,
 				F5E3767D260F2F1D00CDD9C7 /* CropOverlayView.swift in Sources */,
+				F5A7C12A2610BEE4006D153E /* EditImageViewModel.swift in Sources */,
 				F5B937A7260F6557002FBA14 /* UIImage+Crop.swift in Sources */,
 				F5E37665260F273C00CDD9C7 /* ImageCropperApp.swift in Sources */,
 				F5A80A06260FB13A006236B5 /* EditToolbar.swift in Sources */,
@@ -309,7 +325,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"ImageCropper/Preview Content\"";
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = X49Q6BQ22S;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = ImageCropper/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -331,7 +347,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"ImageCropper/Preview Content\"";
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = X49Q6BQ22S;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = ImageCropper/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;

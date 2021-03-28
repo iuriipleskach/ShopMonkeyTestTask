@@ -10,6 +10,7 @@ import SwiftUI
 struct EditToolbar: View {
     let cancel: () -> Void
     let save: () -> Void
+    let reset: () -> Void
 
     @Environment(\.editMode) var editMode
 
@@ -18,6 +19,7 @@ struct EditToolbar: View {
             HStack {
                 Button("Cancel", action: exitEditModeAndCancel)
                 Spacer()
+                Button("Reset Edits", action: reset)
                 Button("Save", action: exitEditModeAndSave)
             }
             .padding()
@@ -46,6 +48,8 @@ struct EditToolbar: View {
 
 struct EditToolbar_Previews: PreviewProvider {
     static var previews: some View {
-        EditToolbar(cancel: {}, save: {})
+        EditToolbar(cancel: {}, save: {}, reset: {})
+        EditToolbar(cancel: {}, save: {}, reset: {})
+            .environment(\.editMode, Binding.constant(EditMode.active))
     }
 }

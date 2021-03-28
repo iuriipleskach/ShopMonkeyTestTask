@@ -10,7 +10,7 @@ import SwiftUI
 struct ContentView: View {
     @ObservedObject var imageStore: ImageStore
     var body: some View {
-        EditImageView(image: imageStore.images[0])
+        EditImageView(viewModel: EditImageViewModel(originalImage: imageStore.images[2]))
             .padding()
     }
 }

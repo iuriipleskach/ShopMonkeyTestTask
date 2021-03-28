@@ -5,12 +5,12 @@
 //  Created by Yuriy Pleskach on 27.03.2021.
 //
 
-import SwiftUI
+import UIKit
 
 final class ImageStore: ObservableObject {
-    @Published var images: [EditableImage]
+    @Published var images: [UIImage]
 
-    init(images: [EditableImage] = [EditableImage(imageName: "Car1"), EditableImage(imageName: "Car2"), EditableImage(imageName: "Car3")]) { // Force unwrap is used only for testing purposes to simplify the initialization code
+    init(images: [UIImage] = [UIImage(named: "Car1")!, UIImage(named: "Car2")!, UIImage(named: "Car3")!]) { // Force unwrap is used only for testing purposes to simplify the initialization code
         self.images = images
     }
 }
