@@ -16,8 +16,13 @@ struct ContentView: View {
 }
 
 struct ContentView_Previews: PreviewProvider {
+    // Added preview for both light and dark mode to remind about the need to support both of modes. Full support of dark/light modes is out of scope for test task
     static var previews: some View {
-        ContentView(imageStore: ImageStore())
-            .previewDevice("iPad Pro (9.7-inch)")
+        ForEach(ColorScheme.allCases, id: \.self) { _ in
+            ContentView(imageStore: ImageStore())
+                .environment(\.editMode, Binding.constant(EditMode.active))
+                .padding()
+                .previewDevice("iPad Pro (9.7-inch)")
+        }
     }
 }

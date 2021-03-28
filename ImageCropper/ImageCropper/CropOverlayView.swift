@@ -9,7 +9,7 @@ import SwiftUI
 
 struct CropOverlayView: View {
     private let fillColor = Color.blue.opacity(0.15)
-    private let borderColor = Color.black
+    private let borderColor = Color.blue
     private var editModeEnabled: Bool {
         editMode?.wrappedValue == .active
     }

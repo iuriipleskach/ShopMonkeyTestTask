@@ -40,20 +40,3 @@ class EditableImage: ObservableObject, Identifiable {
         uiImage = originalImage
     }
 }
-
-extension EditableImage {
-    // Returns the maximum size that is bounded by the specified size and preserving aspect ratio
-    func boundingSize(with size: CGSize) -> CGSize {
-        let width = uiImage.size.width
-        let height = uiImage.size.height
-        let scale: CGFloat
-        if width > height {
-            scale = size.width / width
-        } else {
-            scale = size.height / height
-        }
-
-        let size = CGSize(width: round(width * scale), height: round(height * scale))
-        return size
-    }
-}
