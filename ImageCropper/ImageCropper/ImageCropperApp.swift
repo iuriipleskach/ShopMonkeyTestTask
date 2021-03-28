@@ -9,11 +9,11 @@ import SwiftUI
 
 @main
 struct ImageCropperApp: App {
-    @StateObject private var imageStore = ImageStore()
+    @StateObject private var pictureStore = PicturesStore()
 
     var body: some Scene {
         WindowGroup {
-            ContentView(viewModel: ContentViewModel())
+            ContentView(viewModel: ContentViewModel(picturesStore: pictureStore))
         }
     }
 }

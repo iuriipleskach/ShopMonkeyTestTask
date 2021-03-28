@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		F581C8E82611045A00B59655 /* ContentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F581C8E72611045A00B59655 /* ContentViewModel.swift */; };
+		F581C8ED2611138700B59655 /* Picture.swift in Sources */ = {isa = PBXBuildFile; fileRef = F581C8EC2611138700B59655 /* Picture.swift */; };
 		F5A7C12A2610BEE4006D153E /* EditImageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5A7C1292610BEE4006D153E /* EditImageViewModel.swift */; };
 		F5A80A06260FB13A006236B5 /* EditToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5A80A05260FB13A006236B5 /* EditToolbar.swift */; };
 		F5B937A7260F6557002FBA14 /* UIImage+Crop.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B937A6260F6557002FBA14 /* UIImage+Crop.swift */; };
@@ -16,12 +17,13 @@
 		F5E37669260F273D00CDD9C7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F5E37668260F273D00CDD9C7 /* Assets.xcassets */; };
 		F5E3766C260F273D00CDD9C7 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F5E3766B260F273D00CDD9C7 /* Preview Assets.xcassets */; };
 		F5E37675260F289100CDD9C7 /* EditImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5E37674260F289100CDD9C7 /* EditImageView.swift */; };
-		F5E37679260F28F200CDD9C7 /* ImageStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5E37678260F28F200CDD9C7 /* ImageStore.swift */; };
+		F5E37679260F28F200CDD9C7 /* PicturesStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5E37678260F28F200CDD9C7 /* PicturesStore.swift */; };
 		F5E3767D260F2F1D00CDD9C7 /* CropOverlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5E3767C260F2F1D00CDD9C7 /* CropOverlayView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		F581C8E72611045A00B59655 /* ContentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewModel.swift; sourceTree = "<group>"; };
+		F581C8EC2611138700B59655 /* Picture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Picture.swift; sourceTree = "<group>"; };
 		F5A7C1292610BEE4006D153E /* EditImageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditImageViewModel.swift; sourceTree = "<group>"; };
 		F5A80A05260FB13A006236B5 /* EditToolbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditToolbar.swift; sourceTree = "<group>"; };
 		F5B937A6260F6557002FBA14 /* UIImage+Crop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Crop.swift"; sourceTree = "<group>"; };
@@ -32,7 +34,7 @@
 		F5E3766B260F273D00CDD9C7 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		F5E3766D260F273D00CDD9C7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F5E37674260F289100CDD9C7 /* EditImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditImageView.swift; sourceTree = "<group>"; };
-		F5E37678260F28F200CDD9C7 /* ImageStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageStore.swift; sourceTree = "<group>"; };
+		F5E37678260F28F200CDD9C7 /* PicturesStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PicturesStore.swift; sourceTree = "<group>"; };
 		F5E3767C260F2F1D00CDD9C7 /* CropOverlayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CropOverlayView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -125,7 +127,8 @@
 		F5E37677260F28C200CDD9C7 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				F5E37678260F28F200CDD9C7 /* ImageStore.swift */,
+				F5E37678260F28F200CDD9C7 /* PicturesStore.swift */,
+				F581C8EC2611138700B59655 /* Picture.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -205,9 +208,10 @@
 				F5B937A7260F6557002FBA14 /* UIImage+Crop.swift in Sources */,
 				F5E37665260F273C00CDD9C7 /* ImageCropperApp.swift in Sources */,
 				F581C8E82611045A00B59655 /* ContentViewModel.swift in Sources */,
+				F581C8ED2611138700B59655 /* Picture.swift in Sources */,
 				F5A80A06260FB13A006236B5 /* EditToolbar.swift in Sources */,
 				F5E37675260F289100CDD9C7 /* EditImageView.swift in Sources */,
-				F5E37679260F28F200CDD9C7 /* ImageStore.swift in Sources */,
+				F5E37679260F28F200CDD9C7 /* PicturesStore.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

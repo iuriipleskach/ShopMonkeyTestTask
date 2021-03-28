@@ -47,7 +47,7 @@ struct CropOverlayView: View {
         let height = geometry.size.height
         let startLocation = value.startLocation
         let translation = value.translation
-        let borderDragableWidth: CGFloat = 20 // AHIG minimum tapable area (40) divided by 2
+        let borderDragableWidth: CGFloat = 50 // > AHIG minimum tapable area (40) 
 
         var insets = EdgeInsets()
         if abs(startLocation.x) < borderDragableWidth {

@@ -9,15 +9,15 @@ import UIKit
 import CoreGraphics
 
 class EditImageViewModel: ObservableObject {
-    private var originalImage: UIImage
+    private var originalPicture: Picture
 
     @Published var image: UIImage
     @Published var scale: CGFloat = 1
 
     // MARK: - Init
-    internal init(originalImage: UIImage) {
-        self.originalImage = originalImage
-        image = originalImage
+    internal init(originalImage: Picture) {
+        self.originalPicture = originalImage
+        image = originalImage.image
     }
 
     // MARK: - Image Editing
@@ -42,24 +42,26 @@ class EditImageViewModel: ObservableObject {
     // MARK: -
 
     func applyEdits() {
-        guard scale > 1.0 else { return }
-        let imageRect = CGRect(origin: .zero, size: image.size)
-        let invertedScale = 1.0 / scale
-        let scaleTransform = CGAffineTransform.identity
-            .translatedBy(x: imageRect.midX, y: imageRect.midY)
-            .scaledBy(x: invertedScale, y: invertedScale)
-            .translatedBy(x: -imageRect.midX, y: -imageRect.midY)
-        let cropRect = imageRect
-            .applying(scaleTransform)
-            .integral
+        if scale > 1.0 { // then apply crop corresponding to scale
+            let imageRect = CGRect(origin: .zero, size: image.size)
+            let invertedScale = 1.0 / scale
+            let scaleTransform = CGAffineTransform.identity
+                .translatedBy(x: imageRect.midX, y: imageRect.midY)
+                .scaledBy(x: invertedScale, y: invertedScale)
+                .translatedBy(x: -imageRect.midX, y: -imageRect.midY)
+            let cropRect = imageRect
+                .applying(scaleTransform)
+                .integral
 
-        image = image.cropping(to: cropRect) ?? UIImage()
+            image = image.cropping(to: cropRect) ?? UIImage()
+        }
+
         scale = 1
-        originalImage = image
+        originalPicture.image = image
     }
 
     func reset() {
-        image = originalImage
+        image = originalPicture.image
         scale = 1
     }
 }

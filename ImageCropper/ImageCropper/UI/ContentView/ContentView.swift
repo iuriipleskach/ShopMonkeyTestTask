@@ -19,9 +19,11 @@ struct ContentView: View {
                         Button(action: viewModel.showPrevious) {
                             Image(systemName: "chevron.backward")
                         }
+                        .disabled(!viewModel.hasPrevious)
                         Button(action: viewModel.showNext) {
                             Image(systemName: "chevron.forward")
                         }
+                        .disabled(!viewModel.hasNext)
                     }
                 }
             }

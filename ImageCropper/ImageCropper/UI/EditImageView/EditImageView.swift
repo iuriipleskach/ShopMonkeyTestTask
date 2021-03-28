@@ -55,7 +55,7 @@ struct EditImageView: View {
 
 struct EditImageView_Previews: PreviewProvider {
     static var previews: some View {
-        EditImageView(viewModel: EditImageViewModel(originalImage: ImageStore().images[2]))
+        EditImageView(viewModel: EditImageViewModel(originalImage: PicturesStore().pictures[2]))
             .previewDevice("iPad Pro (9.7-inch)")
     }
 }
