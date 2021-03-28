@@ -8,20 +8,24 @@
 import SwiftUI
 
 struct ContentView: View {
+    @Environment(\.editMode) var editMode
     @ObservedObject var viewModel: ContentViewModel
     var body: some View {
         if let image = viewModel.currentImage {
-            EditImageView(viewModel: EditImageViewModel(originalImage: image))
-                .gesture(DragGesture(minimumDistance: 100)
-                            .onEnded { value in
-                                if value.translation.width < 0 {
-                                    viewModel.showNext()
-                                } else if value.translation.width > 0 {
-                                    viewModel.showPrevious()
-                                }
-                            }
-                )
-                .padding()
+            VStack {
+                EditImageView(viewModel: EditImageViewModel(originalImage: image))
+                if editMode?.wrappedValue == .inactive {
+                    HStack {
+                        Button(action: viewModel.showPrevious) {
+                            Image(systemName: "chevron.backward")
+                        }
+                        Button(action: viewModel.showNext) {
+                            Image(systemName: "chevron.forward")
+                        }
+                    }
+                }
+            }
+            .padding()
         } else {
             Text("No image to show")
                 .padding()
