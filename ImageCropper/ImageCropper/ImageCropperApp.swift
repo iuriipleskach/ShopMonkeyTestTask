@@ -13,7 +13,7 @@ struct ImageCropperApp: App {
 
     var body: some Scene {
         WindowGroup {
-            ContentView(imageStore: imageStore)
+            ContentView(viewModel: ContentViewModel())
         }
     }
 }

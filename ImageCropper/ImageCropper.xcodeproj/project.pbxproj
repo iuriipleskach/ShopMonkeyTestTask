@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F581C8E82611045A00B59655 /* ContentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F581C8E72611045A00B59655 /* ContentViewModel.swift */; };
 		F5A7C12A2610BEE4006D153E /* EditImageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5A7C1292610BEE4006D153E /* EditImageViewModel.swift */; };
 		F5A80A06260FB13A006236B5 /* EditToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5A80A05260FB13A006236B5 /* EditToolbar.swift */; };
 		F5B937A7260F6557002FBA14 /* UIImage+Crop.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B937A6260F6557002FBA14 /* UIImage+Crop.swift */; };
@@ -20,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F581C8E72611045A00B59655 /* ContentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewModel.swift; sourceTree = "<group>"; };
 		F5A7C1292610BEE4006D153E /* EditImageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditImageViewModel.swift; sourceTree = "<group>"; };
 		F5A80A05260FB13A006236B5 /* EditToolbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditToolbar.swift; sourceTree = "<group>"; };
 		F5B937A6260F6557002FBA14 /* UIImage+Crop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Crop.swift"; sourceTree = "<group>"; };
@@ -50,6 +52,7 @@
 			children = (
 				F5A7C12E2610EDF6006D153E /* EditImageView */,
 				F5E37666260F273C00CDD9C7 /* ContentView.swift */,
+				F581C8E72611045A00B59655 /* ContentViewModel.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -193,6 +196,7 @@
 				F5A7C12A2610BEE4006D153E /* EditImageViewModel.swift in Sources */,
 				F5B937A7260F6557002FBA14 /* UIImage+Crop.swift in Sources */,
 				F5E37665260F273C00CDD9C7 /* ImageCropperApp.swift in Sources */,
+				F581C8E82611045A00B59655 /* ContentViewModel.swift in Sources */,
 				F5A80A06260FB13A006236B5 /* EditToolbar.swift in Sources */,
 				F5E37675260F289100CDD9C7 /* EditImageView.swift in Sources */,
 				F5E37679260F28F200CDD9C7 /* ImageStore.swift in Sources */,

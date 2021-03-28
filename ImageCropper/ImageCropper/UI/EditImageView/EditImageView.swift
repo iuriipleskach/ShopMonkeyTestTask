@@ -51,7 +51,6 @@ struct EditImageView: View {
                 Spacer(minLength: spacerMinLength)
             }
         }
-
     }
 }
 
