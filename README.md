@@ -6,4 +6,4 @@ Implemented the following functionality:
 - Save editings (in-memory, no persistence)
 - Undo
 
-![Features Sample](iSample.gif)
+![Features Sample](Sample.gif)
